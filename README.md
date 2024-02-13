@@ -25,7 +25,39 @@ Before running this project, ensure you have the following installed:
    pip install yfinance sklearn prefect
    ```
 
-## Usage
+## Setup Steps
+
+1. **Install Prefect**: Install Prefect Python library using pip.
+   ```
+   pip install prefect
+   ```
+
+2. **Start Prefect Server and UI**:
+   - Prefect Server can be started using Docker.
+   - Use Prefect CLI to spin up the server and UI.
+     ```
+     prefect server start
+     ```
+
+3. **Configure Database**:
+   - Connect Prefect Server to a PostgreSQL database.
+   - The connection can be configured via the Prefect CLI or environment variables.
+
+4. **Start an Agent**:
+   - Run a Prefect agent in your environment.
+     ```
+     prefect agent start
+     ```
+
+5. **Deploy and Run Flows**:
+   - Write flows as you would in Prefect Cloud.
+   - Register flows to your on-premise server.
+   - Trigger runs through the UI or Prefect CLI.
+
+For detailed installation and configuration instructions, refer to the [Prefect Documentation](https://docs.prefect.io/orchestration/server/overview.html).
+
+
+## Simple Usage without Prefect
 
 To run the stock price prediction pipeline, execute the main script:
 
@@ -38,6 +70,39 @@ This script will perform the following tasks:
 - Preprocess the data for modeling.
 - Train a simple linear regression model.
 - Predict future stock prices.
+
+## Usage with Prefect
+
+To run the stock price prediction pipeline using Prefect, execute the following command:
+
+Prefect On-Premise is a deployment option for Prefect, allowing you to run and manage Prefect within your own infrastructure. This guide provides a simplified overview of setting up and using Prefect in an on-premise environment.
+
+This is ideal for those who want to maintain control over their data and execution environment. It involves setting up Prefect's components within your own servers or private cloud.
+
+1. **Start Prefect Server and UI**:
+   - Prefect Server can be started using Docker.
+   - Use Prefect CLI to spin up the server and UI.
+     ```
+     prefect server start
+     ```
+
+2. **Configure Database**:
+   - Connect Prefect Server to a PostgreSQL database.
+   - The connection can be configured via the Prefect CLI or environment variables.
+
+
+3. **Start an Agent**:
+   - Run a Prefect agent in your environment.
+     ```
+     prefect agent start
+     ```
+
+4. **Deploy and Run Flows**:
+   - Write flows as you would in Prefect Cloud.
+   - Register flows to your on-premise server.
+   - Trigger runs through the UI or Prefect CLI.
+   
+   
 
 ## Contributing
 
