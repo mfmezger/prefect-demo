@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "prefect-demo"
+version = "0.1.0"
+description = ""
+authors = ["Baatout, Azza <Azza.Baatout@adesso.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+prefect = "^2.14.21"
+yfinance = "^0.2.36"
+scikit-learn = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
